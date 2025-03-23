@@ -1,31 +1,34 @@
+<!doctype html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <title>Reveal.js Presentation</title>
     <link rel="stylesheet" href="dist/reveal.css" />
     <link rel="stylesheet" href="dist/theme/white.css" />
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>Slide 1
-        <link rel="stylesheet" href="plugin/highlight/monokai.css" />
-        <script src="plugin/highlight/highlight.js"></script>
-        <script>
-          Reveal.initialize({
-          plugins: [RevealHighlight],
-          });
-        </script>
+        <section>
+          <h2>Slide 1</h2>
           <pre><code data-trim class="language-stata">
-          clear all
-          webuse set data.califano.xyz
-          webuse masteristi.dta
+clear all
+webuse set data.califano.xyz
+webuse masteristi.dta
           </code></pre>
         </section>
-        <section>Slide 2</section>
+        <section>
+          <h2>Slide 2</h2>
+        </section>
       </div>
     </div>
     <script src="dist/reveal.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
     <script>
-      Reveal.initialize();
+      Reveal.initialize({
+        plugins: [ RevealHighlight ]
+      });
     </script>
   </body>
 </html>
