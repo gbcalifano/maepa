@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Bakery - Brand Book</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Custom properties */
+        :root {
+            --marrone-chiaro: #E6D2B5;
+            --verde-vegan: #00bb2d;
+            --rosso-barbabietola: #E05D5D;
+            --giallo-curcuma: #FFCB2F;
+            --blu-spirulina: #39A3C7;
+            --text-color: #333;
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-color);
+            background-color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Voga', 'Times New Roman', serif;
+            font-weight: 400;
+        }
+
+        /* Custom font */
+        @font-face {
+            font-family: 'Voga';
+            src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--marrone-chiaro);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-family: 'Voga', 'Times New Roman', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover, 
+        nav ul li a.active {
+            background-color: var(--verde-vegan);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background-color: var(--marrone-chiaro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 120px;
+            padding-bottom: 60px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            margin-top: 2rem;
+        }
+
+        .hero h1 span {
+            display: block;
+            font-size: 2.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--verde-vegan);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: var(--transition);
+            margin: 0 0.5rem;
+        }
+
+        .hero-btn:hover {
+            background-color: #7bdd00;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logo container */
+        .logo-container {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Sections Common */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--verde-vegan);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About Section */
+        .about {
+            background-color: #fff;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .about-text {
+            flex: 1 1 450px;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-image {
+            flex: 1 1 450px;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Team Section */
+        .team {
+            background-color: var(--marrone-chiaro);
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .team-member {
+            flex: 0 0 calc(33.333% - 2rem);
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-member-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-member-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member-info p {
+            color: #666;
+        }
+
+        /* Mission Section */
+        .mission {
+            background-color: #fff;
+        }
+
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .mission-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Value Proposition */
+        .value-prop {
+            background-color: var(--marrone-chiaro);
+        }
+
+        .value-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .value-card {
+            flex: 0 0 calc(33.333% - 2rem);
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-card i {
+            font-size: 3rem;
+            color: var(--verde-vegan);
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Color Palette */
+        .colors {
+            background-color: #fff;
+        }
+
+        .color-palette {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .color-item {
+            flex: 0 0 calc(20% - 2rem);
+            text-align: center;
+        }
+
+        .color-box {
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .color-box:hover {
+            transform: scale(1.05);
+        }
+
+        .color-box.marrone-chiaro {
+            background-color: var(--marrone-chiaro);
+        }
+
+        .color-box.verde-vegan {
+            background-color: var(--verde-vegan);
+        }
+
+        .color-box.rosso-barbabietola {
+            background-color: var(--rosso-barbabietola);
+        }
+
+        .color-box.giallo-curcuma {
+            background-color: var(--giallo-curcuma);
+        }
+
+        .color-box.blu-spirulina {
+            background-color: var(--blu-spirulina);
+        }
+
+        .color-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-item p {
+            font-family: monospace;
+            color: #666;
+        }
+
+        /* Typography */
+        .typography {
+            background-color: var(--marrone-chiaro);
+        }
+
+        .font-showcase {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .font-name {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-family: 'Voga', 'Times New Roman', serif;
+        }
+
+        /* Products */
+        .products {
+            background-color: #fff;
+        }
+
+        .product-showcase {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .product-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .product-info {
+            text-align: center;
+        }
+
+        .product-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Location */
+        .location {
+            background-color: var(--marrone-chiaro);
+        }
+
+        .location-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .location-text {
+            flex: 1 1 450px;
+        }
+
+        .location-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .location-text ul {
+            list-style-position: inside;
+            margin-top: 1rem;
+        }
+
+        .location-map {
+            flex: 1 1 450px;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Bau Bakery */
+        .bau-bakery {
+            background-color: #fff;
+        }
+
+        .bau-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .bau-text {
+            flex: 1 1 450px;
+        }
+
+        .bau-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .bau-image {
+            flex: 1 1 450px;
+            text-align: center;
+        }
+
+        .bau-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Strengths Section (ex SWOT) */
+        .strengths {
+            background-color: var(--marrone-chiaro);
+        }
+
+        .strengths-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .strengths-item {
+            flex: 0 0 calc(50% - 1rem);
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .strengths-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .strengths-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--verde-vegan);
+            display: flex;
+            align-items: center;
+        }
+
+        .strengths-item h3 i {
+            margin-right: 10px;
+        }
+
+        .strengths-item p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            color: #333;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--verde-vegan);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Navigation menu for mobile */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--text-color);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .value-card,
+            .team-member {
+                flex: 0 0 calc(50% - 2rem);
+            }
+
+            .color-item {
+                flex: 0 0 calc(33.333% - 2rem);
+                margin-bottom: 2rem;
+            }
+            
+            .strengths-item {
+                flex: 0 0 calc(50% - 1rem);
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero h1 span {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--marrone-chiaro);
+                padding: 1rem 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 0.8rem 1rem;
+            }
+
+            .logo-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h1 span {
+                font-size: 2rem;
+            }
+
+            .about-text,
+            .about-image,
+            .location-text,
+            .location-map,
+            .bau-text,
+            .bau-image,
+            .strengths-item {
+                flex: 0 0 100%;
+                margin-bottom: 2rem;
+            }
+
+            .value-card,
+            .team-member,
+            .color-item {
+                flex: 0 0 calc(100% - 2rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                width: 200px;
+                height: 200px;
+                margin-top: 40px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 span {
+                font-size: 1.6rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-btn {
+                display: block;
+                margin: 1rem auto;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-text">COLOUR BAKERY</div>
+            <nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">Chi Siamo</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#products">Prodotti</a></li>
+                    <li><a href="#colors">Identità</a></li>
+                    <li><a href="#bau-bakery">Bau Bakery</a></li>
+                    <li><a href="#strengths">Punti di Forza</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content animate-fade-in">
+            <div class="logo-container">
+                <img src="https://imgur.com/gZ0A8eQ.jpg" alt="Colour Bakery Logo">
+            </div>
+            <h1>COLOUR BAKERY <span>PASTICCERIA VEGANA</span></h1>
+            <p><em>Perché siamo colorati</em></p>
+            <div class="hero-buttons">
+                <a href="#about" class="hero-btn">Scopri di più</a>
+                <a href="#products" class="hero-btn">I Nostri Prodotti</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title animate-fade-in">
+                <h2>CHI SIAMO</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text animate-fade-in">
+                    <h3>Che cos'è Colour Bakery?</h3>
+                    <p>Colour Bakery è una pasticceria artigianale 100% vegana, specializzata in croissant colorati naturalmente con ingredienti vegetali come frutta, verdure, spezie ed erbe. Offriamo prodotti dolciari di alta qualità, completamente privi di ingredienti di origine animale.</p>
+                    <p>La nostra sede è collocata nel quartiere Vomero di Napoli, un'area caratterizzata da un forte senso di comunità e frequentata principalmente da famiglie e professionisti con buon potere d'acquisto.</p>
+                </div>
+                <div class="about-image animate-fade-in">
+                    <img src="https://imgur.com/07oRv5B.jpg" alt="Colour Bakery Croissants">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <div class="section-title animate-fade-in">
+                <h2>IL NOSTRO TEAM</h2>
+            </div>
+            <div class="team-members">
+                <div class="team-member animate-fade-in">
+                    <div class="team-member-info">
+                        <h3>Riccardo Zappa</h3>
+                        <p>Presidente</p>
+                    </div>
+                </div>
+                <div class="team-member animate-fade-in">
+                    <div class="team-member-info">
+                        <h3>Alessia Molino</h3>
+                        <p>Vicepresidente</p>
+                    </div>
+                </div>
+                <div class="team-member animate-fade-in">
+                    <div class="team-member-info">
+                        <h3>Antonio Rega</h3>
+                        <p>Membro del team</p>
+                    </div>
+                </div>
+                <div class="team-member animate-fade-in">
+                    <div class="team-member-info">
+                        <h3>Margherita Spera</h3>
+                        <p>Membro del team</p>
+                    </div>
+                </div>
+                <div class="team-member animate-fade-in">
+                    <div class="team-member-info">
+                        <h3>Francesco Morricone</h3>
+                        <p>Membro del team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="mission">
+        <div class="container">
+            <div class="section-title animate-fade-in">
+                <h2>LA NOSTRA MISSION</h2>
+            </div>
+            <div class="mission-content animate-fade-in">
+                <p>Il nostro obiettivo è rivoluzionare la pasticceria vegana, dimostrando che è possibile unire gusto, sostenibilità e creatività senza compromessi. Ogni croissant è un'esperienza visiva e sensoriale unica, con impasti colorati in modo naturale e una sfogliatura artigianale realizzata con burro vegetale di alta qualità.</p>
+                <p><strong>Colour Bakery non è solo una pasticceria, ma un'esperienza che unisce gusto, etica e innovazione.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <div class="container">
+            <div class="section-title animate-fade-in">
+                <h2>I NOSTRI VALORI</h2>
+            </div>
+            <div class="value-cards">
+                <div class="value-card animate-fade-in">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Ingredienti di alta qualità</h3>
+                    <p>Utilizziamo solo prodotti biologici, naturali e privi di additivi artificiali.</p>
+                </div>
+                <div class="value-card animate-fade-in">
+                    <i class="fas fa-bread-slice"></i>
+                    <h3>Lievitazione lenta</h3>
+                    <p>Con lievito madre per un impasto più digeribile, profumato e dalla perfetta alveolatura.</p>
+                </div>
+                <div class="value-card animate-fade-in">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Sostenibilità</h3>
+                    <p>Packaging ecologico in carta riciclabile e promozione esclusivamente digitale per ridurre sprechi.</p>
+                </div>
+                <div class="value-card animate-fade-in">
+                    <i class="fas fa-users"></i>
+                    <h3>Inclusività</h3>
+                    <p>Pensiamo anche agli amici a quattro zampe con la nostra linea "Bau Bakery".</p>
+                </div>
+                <div class="value-card animate-fade-in">
+                    <i class="fas fa-clock"></i>
+                    <h3>Orari flessibili</h3>
+                    <p>Siamo aperti dalle 06:30 alle 02:30 nei giorni di venerdì, sabato e domenica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title animate-fade-in">
+                <h2>I NOSTRI PRODOTTI</h2>
+            </div>
+            <div class="product-showcase animate-fade-in">
+                <img src="https://imgur.com/KzCmZ5T.jpg" alt="Croissants colorati" class="product-image">
+                <div class="product-info">
+                    <h3>I nostri cornetti colorati</h3>
+                    <p>Ogni cornetto è un'opera d'arte, con colori naturali ottenuti da ingredienti vegetali come frutta, verdure e spezie. Ogni colore rappresenta un gusto diverso, offrendo un'esperienza sensoriale unica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="colors" id="colors">
+        <div class="container">
+            <div class="section-title animate-fade-in">
+                <h2>LA NOSTRA PALETTE</h2>
+            </div>
+            <div class="color-palette">
+                <div class="color-item animate-fade-in">
+                    <div class="color-box marrone-chiaro"></div>
+                    <h4>Marroncino Chiaro</h4>
+                    <p>#E6D2B5</p>
+                </div>
+                <div class="color-item animate-fade-in">
+                    <div class="color-box verde-vegan"></div>
+                    <h4>Verde Vegan</h4>
+                    <p>#00bb2d</p>
+                </div>
+                <div class="color-item animate-fade-in">
+                    <div class="color-box rosso-barbabietola"></div>
+                    <h4>Rosso Barbabietola</h4>
+                    <p>#E05D5D</p>
+                </div>
+                <div class="color-item animate-fade-in">
+                    <div class="color-box giallo-curcuma"></div>
+                    <h4>Giallo Curcuma</h4>
+                    <p>#FFCB2F</p>
+                </div>
+                <div class="color-item animate-fade-in">
+                    <div class="color-box blu-spirulina"></div>
+                    <h4>Blu Spirulina</h4>
+                    <p>#39A3C7</p>
+                </div>
+            </div>
+            <div class="font-showcase animate-fade-in">
+                <h3>IL NOSTRO FONT: VOGA</h3>
+                <img src="https://imgur.com/AE99DD4.jpg" alt="Font Voga" style="max-width: 100%;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+        <div class="container">
+            <div class="section-title animate-fade-in">
+                <h2>DOVE SIAMO</h2>
+            </div>
+            <div class="location-content">
+                <div class="location-text animate-fade-in">
+                    <h3>Quartiere Vomero, Napoli</h3>
+                    <p>La nostra sede è collocata nel quartiere Vomero di Napoli, un'area caratterizzata da un forte senso di comunità e frequentata principalmente da famiglie e professionisti con buon potere d'acquisto.</p>
+                    <p>Le vicine zone pedonali di via Scarlatti e via Giordano offrono un flusso costante di passanti, creando condizioni ideali per sviluppare e mantenere una clientela locale fidelizzata.</p>
+                    <h4>ORARI DI APERTURA</h4>
+                    <ul>
+                        <li>Lunedì - Giovedì: 06:30 - 18:30</li>
+                        <li>Venerdì - Domenica: 06:30 - 02:30</li>
+                    </ul>
+                </div>
+                <div class="location-map animate-fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12080.82086614204!2d14.22152675!3d40.8384101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b08a7f987cac7%3A0x3df526a0490edd6e!2sVomero%2C%20Napoli%2C%20Italia!5e0!3m2!1sit!2sit!4v1713033006761!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bau Bakery Section -->
+    <section class="bau-bakery" id="bau-bakery">
+        <div class="container">
+            <div class="section-title animate-fade-in">
+                <h2>BAU BAKERY</h2>
+                <p>Il nostro sub-brand</p>
+            </div>
+            <div class="bau-content">
+                <div class="bau-text animate-fade-in">
+                    <h3>Un'esperienza inclusiva</h3>
+                    <p>Nel momento in cui ti siederai in un posto adibito alla zona animali, entrerai nella Bau Bakery. Dove uomo e animali sono la stessa cosa. Qui il vostro pet potrà godere di fantastici biscotti vegani in modo tale che entrambi possiate passare dei piacevoli momenti in compagnia.</p>
+                    <p>Da Colour Bakery crediamo nell'inclusività a 360 gradi, ed è per questo che abbiamo pensato anche ai nostri amici a quattro zampe, offrendo uno spazio dedicato dove possono sentirsi accolti e godersi la loro esperienza.</p>
+                </div>
+                <div class="bau-image animate-fade-in">
+                    <img src="https://imgur.com/HpYMohb.jpg" alt="Bau Bakery" style="max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- I Nostri Punti di Forza -->
+    <section class="strengths" id="strengths">
+        <div class="container">
+            <div class="section-title animate-fade-in">
+                <h2>I NOSTRI PUNTI DI FORZA</h2>
+            </div>
+            <div class="strengths-container">
+                <div class="strengths-item animate-fade-in">
+                    <h3><i class="fas fa-star"></i> Prodotti di qualità superiore</h3>
+                    <p>Dolci vegani artigianali di alta qualità, colorati naturalmente con ingredienti vegetali come frutta, verdure e spezie.</p>
+                </div>
+                <div class="strengths-item animate-fade-in">
+                    <h3><i class="fas fa-paw"></i> Esperienza inclusiva</h3>
+                    <p>Attenzione ai nostri amici a quattro zampe con prodotti dedicati nella zona Bau Bakery, dove animali e padroni possono godere insieme dell'esperienza.</p>
+                </div>
+                <div class="strengths-item animate-fade-in">
+                    <h3><i class="fas fa-leaf"></i> Sostenibilità ambientale</h3>
+                    <p>Packaging completamente ecologico in carta riciclabile e forte attenzione alla riduzione degli sprechi in ogni fase della produzione.</p>
+                </div>
+                <div class="strengths-item animate-fade-in">
+                    <h3><i class="fas fa-clock"></i> Flessibilità</h3>
+                    <p>Orari estesi nel weekend (06:30 - 02:30) per venire incontro a tutte le esigenze dei nostri clienti, dai professionisti mattinieri agli amanti della vita notturna.</p>
+                </div>
+                <div class="strengths-item animate-fade-in">
+                    <h3><i class="fas fa-globe"></i> Marketing eco-friendly</h3>
+                    <p>Pubblicità esclusivamente digitale per ridurre l'impatto ambientale, senza flyer o materiali cartacei che potrebbero finire nella spazzatura.</p>
+                </div>
+                <div class="strengths-item animate-fade-in">
+                    <h3><i class="fas fa-lightbulb"></i> Innovazione continua</h3>
+                    <p>Ricerca costante di nuove ricette e combinazioni di sapori per sorprendere i nostri clienti e mantenere viva la curiosità verso i nostri prodotti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>© 2025 Colour Bakery - Pasticceria Vegana</p>
+            <p>Quartiere Vomero, Napoli</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+            });
+
+            // Smooth Scrolling for Navigation
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Hide mobile menu when a link is clicked
+                    navMenu.classList.remove('show');
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Highlight active section in navigation
+            function highlightNav() {
+                const sections = document.querySelectorAll('section');
+                const scrollPosition = window.scrollY + 200;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + sectionId) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', highlightNav);
+
+            // Animation on Scroll
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('.animate-fade-in');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = 1;
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // Set initial state for animations
+            const animatedElements = document.querySelectorAll('.animate-fade-in');
+            animatedElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            // Trigger animation on page load and scroll
+            window.addEventListener('load', animateOnScroll);
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Punti di Forza hover effect
+            const strengthsItems = document.querySelectorAll('.strengths-item');
+            
+            strengthsItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        icon.style.transform = 'scale(1.2) rotate(5deg)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    }
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        icon.style.transform = 'scale(1) rotate(0)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
